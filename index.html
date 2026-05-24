@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAne Doces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <nav>
+        <img src="assets/logo.jpg" class="logo" alt="KAne Doces">
+        <a class="btn" href="#doces">Ver Cardápio</a>
+    </nav>
+
+    <div class="hero-content fade-up">
+        <div class="text">
+            <h1>Amor em forma de doce 🍫</h1>
+            <p>Brownies artesanais, cones trufados e doces gourmet feitos com carinho.</p>
+
+<div class="pedido-box">
+
+  <input type="text" id="nome" placeholder="Seu nome">
+
+  <input type="tel" id="telefone" placeholder="Seu WhatsApp">
+
+  <input type="text" id="pedido" placeholder="Seu pedido">
+
+  <button onclick="enviarPedido()" class="btn">
+    Enviar Pedido
+  </button>
+
+</div>
+
+            
+        </div>
+
+        <div class="image">
+            <img src="assets/brownie1.png" alt="Brownie Gourmet">
+        </div>
+    </div>
+</header>
+
+<section class="sobre fade-up">
+    <div class="container">
+        <h2>Sobre a KAne Doces</h2>
+        <p>
+            KAne Doces nasceu da paixão pela confeitaria artesanal. Cada brownie,
+            cone e doce é preparado com carinho, qualidade e sabores inesquecíveis.
+        </p>
+    </div>
+</section>
+
+<section class="galeria fade-up">
+    <h2>Nossos Doces</h2>
+
+    <div class="cards">
+        <img src="assets/brownie1.png">
+        <img src="assets/brownie2.jpg">
+        <img src="assets/brownie3.jpg">
+    </div>
+</section>
+
+<section class="menu fade-up" id="doces">
+    <h2>Cardápio</h2>
+
+    <div class="menu-grid">
+        <div class="menu-card">
+            <h3>Brownies</h3>
+            <ul>
+                <li>Ninho com Nutella — R$15,90</li>
+                <li>Brigadeiro — R$15,90</li>
+                <li>Oreo — R$15,90</li>
+                <li>Tradicional — R$15,90</li>
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <h3>Copo Brownie</h3>
+            <ul>
+                <li>Ninho com Nutella — R$15,90</li>
+                <li>Brigadeiro Gourmet — R$15,90</li>
+                <li>Morango com Ninho — R$15,90</li>
+                <li>Creme — R$15,90</li>
+            </ul>
+        </div>
+
+        <div class="menu-card">
+            <h3>Cones Trufados</h3>
+            <ul>
+                <li>Ninho com Nutella — R$11,90</li>
+                <li>Oreo — R$11,90</li>
+                <li>Prestígio — R$11,90</li>
+                <li>Maracujá — R$11,90</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="depoimentos fade-up">
+    <h2>O que nossos clientes dizem</h2>
+
+    <div class="depoimentos-grid">
+        <div class="dep">
+            <p>"Uma verdadeira delícia!"</p>
+        </div>
+
+        <div class="dep">
+            <p>"Doces encantadores e muito saborosos."</p>
+        </div>
+
+        <div class="dep">
+            <p>"Vou comprar novamente com certeza."</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="stats fade-up">
+    <div class="stats-grid">
+        <div class="stat">
+            <h3>+500</h3>
+            <p>Clientes satisfeitos</p>
+        </div>
+
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Produção artesanal</p>
+        </div>
+
+        <div class="stat">
+            <h3>Premium</h3>
+            <p>Ingredientes selecionados</p>
+        </div>
+    </div>
+</section>
+
+<section class="banner fade-up">
+    <div class="banner-content">
+        <h2>Experimente nossos brownies gourmet</h2>
+        <p>Sabores intensos, recheios cremosos e uma experiência inesquecível.</p>
+    </div>
+</section>
+
+<section class="processo fade-up">
+    <h2>Como Produzimos</h2>
+
+    <div class="process-grid">
+        <div class="process-card">
+            <span>01</span>
+            <h3>Ingredientes Premium</h3>
+            <p>Selecionamos ingredientes de alta qualidade para cada receita.</p>
+        </div>
+
+        <div class="process-card">
+            <span>02</span>
+            <h3>Produção Artesanal</h3>
+            <p>Cada doce é feito com carinho e atenção aos detalhes.</p>
+        </div>
+
+        <div class="process-card">
+            <span>03</span>
+            <h3>Entrega Especial</h3>
+            <p>Levamos sabor e felicidade para cada cliente.</p>
+        </div>
+    </div>
+</section>
+
+<section class="instagram fade-up">
+    <h2>Siga a KAne Doces</h2>
+    <p>Veja novidades, sabores especiais e bastidores da produção.</p>
+
+    <a class="insta-btn" href="https://www.instagram.com/kane_doces/" target="_blank">
+        @kane_doces
+    </a>
+</section>
+
+
+<footer>
+    <img src="assets/logo.jpg" class="footer-logo">
+
+    <p>Siga no Instagram:</p>
+    <a href="https://www.instagram.com/kane_doces/" target="_blank">@kane_doces</a>
+
+    <p class="whats">WhatsApp: (11) 96701-9554</p>
+
+</footer>
+
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.fade-up').forEach((el)=>{
+    observer.observe(el);
+});
+</script>
+
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCcPl9Oa0z0j4a4wciu81Y8gN5PO_dgKW0",
+  authDomain: "kane-doces-68bb5.firebaseapp.com",
+  projectId: "kane-doces-68bb5",
+  storageBucket: "kane-doces-68bb5.firebasestorage.app",
+  messagingSenderId: "1085196864265",
+  appId: "1:1085196864265:web:33c1b5c13073d6987561d8"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.enviarPedido = async function(){
+
+  const nome = document.getElementById("nome").value;
+  const telefone = document.getElementById("telefone").value;
+  const pedido = document.getElementById("pedido").value;
+
+  if(!nome || !telefone || !pedido){
+    alert("Preencha todos os campos");
+    return;
+  }
+
+  try{
+
+    await addDoc(collection(db, "clientes"), {
+      nome: nome,
+      telefone: telefone,
+      pedido: pedido,
+      data: new Date().toLocaleString("pt-BR")
+    });
+
+    const mensagem =
+      `Olá! Meu nome é ${nome} e gostaria de pedir: ${pedido}`;
+
+    window.open(
+      `https://wa.me/5511967019554?text=${encodeURIComponent(mensagem)}`,
+      "_blank"
+    );
+
+  }catch(error){
+    console.error(error);
+    alert("Erro ao enviar pedido");
+  }
+
+}
+
+</script>
+
+</body>
+</html>
