@@ -1,0 +1,492 @@
+html{
+   scroll-behavior:smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#fffaf8;
+    color:#4a2b2b;
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada no mobile */
+}
+
+h1,h2,h3{
+    font-family:'Cormorant Garamond', serif;
+}
+
+/* --- HERO & NAV --- */
+.hero{
+    min-height:100vh;
+    padding:40px 8%;
+    background:linear-gradient(to bottom,#fffaf8,#f8ece9);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(139,75,90,0.08);
+    border-radius:50%;
+    top:-100px;
+    right:-100px;
+    filter:blur(10px);
+    z-index: 1;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: relative;
+    z-index: 2;
+}
+
+.logo{
+    width:120px; /* Reduzido levemente para equilibrar no mobile */
+    border-radius:50%;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-top:60px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content .text{
+    max-width:500px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-content img{
+    width:450px;
+    max-width: 100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- BOTÕES --- */
+.btn{
+    background:#8b4b5a;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    display:inline-block;
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    opacity:0.9;
+    transform:scale(1.05);
+}
+
+/* --- SEÇÕES GERAIS --- */
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:52px;
+    margin-bottom:40px;
+}
+
+.sobre p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* --- GALERIA DE FOTOS --- */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.cards img{
+    width:100%;
+    border-radius:20px;
+    height:350px;
+    object-fit:cover;
+    transition:transform 0.4s ease;
+}
+
+.cards img:hover{
+    transform:scale(1.05);
+}
+
+/* --- CARDÁPIO --- */
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.menu-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:transform 0.4s ease;
+}
+
+.menu-card:hover{
+    transform:translateY(-10px);
+}
+
+.menu-card h3{
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.menu-card li{
+    list-style:none;
+    margin-bottom:12px;
+}
+
+/* --- DEPOIMENTOS --- */
+.depoimentos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.dep{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* --- METRICAS / STATS --- */
+.stats{
+    background:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.stat{
+    background:#fff5f3;
+    padding:40px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.stat h3{
+    font-size:52px;
+    color:#8b4b5a;
+    margin-bottom:10px;
+}
+
+/* --- BANNER INTERMEDIÁRIO --- */
+.banner{
+    background:linear-gradient(rgba(139,75,90,0.8),rgba(139,75,90,0.8)), url('assets/brownie2.jpg');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 8%;
+    border-radius:30px;
+    margin:40px 8%;
+}
+
+.banner h2{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.banner p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+/* --- PROCESSO DE PRODUÇÃO --- */
+.processo{
+    background:#fffaf8;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.process-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
+
+.process-card:hover{
+    transform:translateY(-10px);
+}
+
+.process-card span{
+    font-size:48px;
+    font-weight:bold;
+    color:#8b4b5a;
+}
+
+.process-card h3{
+    margin:20px 0;
+    font-size:32px;
+}
+
+/* --- INSTAGRAM --- */
+.instagram{
+    text-align:center;
+    background:#fdf3f1;
+    border-radius:30px;
+    margin:40px 8%;
+    padding: 60px 20px;
+}
+
+.instagram p{
+    margin-bottom:30px;
+}
+
+.insta-btn{
+    background:#8b4b5a;
+    color:white;
+    text-decoration:none;
+    padding:16px 32px;
+    border-radius:40px;
+    display:inline-block;
+    transition: 0.3s ease;
+}
+
+.insta-btn:hover{
+    transform:scale(1.05);
+}
+
+/* --- FOOTER --- */
+footer{
+    background:#f5e6e2;
+    padding:60px 8%;
+    text-align:center;
+}
+
+.footer-logo{
+    width:120px;
+    border-radius:50%;
+    margin-bottom:20px;
+    animation:float 4s ease-in-out infinite;
+}
+
+footer a{
+    color:#8b4b5a;
+    text-decoration:none;
+}
+
+.whats{
+    margin:20px 0;
+}
+
+/* --- ANIMAÇÕES --- */
+.fade-up{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.fade-up.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0px);}
+}
+
+/* ==========================================
+   MEDIA QUERIES (OTIMIZAÇÃO MOBILE & TABLET)
+   ========================================== */
+
+@media (max-width: 900px) {
+    section {
+        padding: 60px 5%;
+    }
+
+    section h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    /* Ajustes na Nav */
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    /* Hero ajuste */
+    .hero-content {
+        flex-direction: column-reverse; /* Imagem fica no topo no mobile para destacar o produto */
+        text-align: center;
+        margin-top: 40px;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-content img {
+        width: 100px;
+        max-width: 85%;
+        height: auto;
+    }
+
+    /* Sobre e textos */
+    .sobre p {
+        font-size: 16px;
+    }
+
+    /* Cards e Galeria */
+    .cards img {
+        height: 280px;
+    }
+
+    /* Banner */
+    .banner {
+        margin: 40px 5%;
+        padding: 60px 20px;
+        border-radius: 20px;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+
+    /* Instagram e Seções com margem externa */
+    .instagram {
+        margin: 40px 5%;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 34px;
+    }
+    
+    .menu-card {
+        padding: 25px 20px;
+    }
+    
+    .stat {
+        padding: 30px 20px;
+    }
+}
+
+/* ==========================================
+   FORMULÁRIO DE PEDIDOS FIREBASE
+   ========================================== */
+
+.pedido-box{
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:24px;
+    max-width:500px;
+    margin-top:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    border:1px solid rgba(139,75,90,0.08);
+}
+
+.pedido-box input{
+    padding:16px 18px;
+    border-radius:14px;
+    border:none;
+    background:#f7f2f0;
+    font-size:16px;
+    color:#4a2b2b;
+    transition:0.3s ease;
+    font-family:'Poppins', sans-serif;
+}
+
+.pedido-box input::placeholder{
+    color:#8b6b6b;
+}
+
+.pedido-box input:focus{
+    outline:none;
+    background:white;
+    border:2px solid #8b4b5a;
+    box-shadow:0 0 0 4px rgba(139,75,90,0.1);
+}
+
+.pedido-box .btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:500;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .pedido-box{
+        padding:25px;
+        margin-top:25px;
+    }
+
+    .pedido-box input{
+        padding:15px;
+        font-size:15px;
+    }
+
+}
